@@ -7,13 +7,15 @@
 using std::make_shared;
 using std::shared_ptr;
 
-#include "constants.h"
-#include "utility_functions.h"
+#include "camera.h"
 #include "color.h"
-#include "ray.h"
-#include "vec3.h"
-#include "hittable.h"
+#include "constants.h"
 #include "hittable_list.h"
+#include "hittable.h"
+#include "interval.h"
+#include "ray.h"
 #include "sphere.h"
+#include "utility_functions.h"
+#include "vec3.h"
 
 #endif
