@@ -9,7 +9,7 @@ private:
 	double e[ 3 ];
 
 public:
-	explicit vec3();
+	vec3();
 	vec3( double e0, double e1, double e2 );
 
 	double x() const
@@ -38,6 +38,9 @@ public:
 	double length() const;
 	double length_squared() const;
 
+	static vec3 random();
+	static vec3 random( double min, double max );
+
 	friend std::ostream& operator<<( std::ostream& out, const vec3& v );
 	friend vec3 operator+( const vec3& u, const vec3& v );
 	friend vec3 operator-( const vec3& u, const vec3& v );
@@ -48,11 +51,15 @@ public:
 	friend double dot( const vec3& u, const vec3& v );
 	friend vec3 cross( const vec3& u, const vec3& v );
 	friend vec3 unit_vector( const vec3& v );
+	friend vec3 random_unit_vector();
+	friend vec3 random_on_hemisphere( const vec3& normal );
 };
 
 double dot( const vec3& u, const vec3& v );
 vec3 cross( const vec3& u, const vec3& v );
 vec3 unit_vector( const vec3& v );
+vec3 random_unit_vector();
+vec3 random_on_hemisphere( const vec3& normal );
 
 using point3 = vec3;
 

@@ -15,7 +15,7 @@ private:
 	double pixel_samples_scale; // Color scale factor for a sum of pixel samples
 
 	void initialize();
-	color ray_color( const ray& r, const hittable& world ) const;
+	color ray_color( const ray& r, int depth, const hittable& world ) const;
 	vec3 sample_square() const;
 	ray get_ray( int i, int j ) const;
 
@@ -23,6 +23,7 @@ public:
 	double aspect_ratio{ 1.0 };	 // Ratio of image width over height
 	int image_width{ 100 };		 // Rendered image with in pixel count
 	int samples_per_pixel{ 10 }; // Count of random samples for each pixel
+	int max_depth = 10;			 // Maximum number of ray bounces into scene
 	void render( const hittable& world );
 };
 
