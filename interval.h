@@ -15,11 +15,4 @@ struct interval
 	double clamp( double x ) const;
 };
 
-// main: () -> void = {}
-// x: i32 = 12
-// human: class = {}
-// vec3: struct = {}
-// ptr: pointer -> pointer -> human = {}
-//
-
 #endif

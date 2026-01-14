@@ -13,6 +13,7 @@ using std::shared_ptr;
 #include "hittable_list.h"
 #include "hittable.h"
 #include "interval.h"
+#include "material.h"
 #include "ray.h"
 #include "sphere.h"
 #include "utility_functions.h"

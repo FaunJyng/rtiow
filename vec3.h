@@ -37,6 +37,8 @@ public:
 
 	double length() const;
 	double length_squared() const;
+	// Return true if the vector is close to zero in all dimensions.
+	bool near_zero() const;
 
 	static vec3 random();
 	static vec3 random( double min, double max );
@@ -53,6 +55,7 @@ public:
 	friend vec3 unit_vector( const vec3& v );
 	friend vec3 random_unit_vector();
 	friend vec3 random_on_hemisphere( const vec3& normal );
+	friend vec3 reflect( const vec3& v, const vec3& n );
 };
 
 double dot( const vec3& u, const vec3& v );
@@ -60,6 +63,7 @@ vec3 cross( const vec3& u, const vec3& v );
 vec3 unit_vector( const vec3& v );
 vec3 random_unit_vector();
 vec3 random_on_hemisphere( const vec3& normal );
+vec3 reflect( const vec3& v, const vec3& n );
 
 using point3 = vec3;
 

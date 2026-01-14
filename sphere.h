@@ -3,15 +3,17 @@
 
 #include "hittable.h"
 #include "vec3.h"
+#include <memory>
 
 class sphere : public hittable
 {
 private:
 	point3 center;
 	double radius;
+	std::shared_ptr<material> mat;
 
 public:
-	sphere( const point3& center, double radius );
+	sphere( const point3& center, double radius, std::shared_ptr<material> mat );
 	bool hit( const ray& r, interval ray_t, hit_record& rec ) const override;
 };
 

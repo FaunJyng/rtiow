@@ -8,6 +8,7 @@ project(rtiow
 add_executable(
 	main 
 	main.cpp 
+	vec3.cpp 
 	camera.cpp
 	color.cpp 
 	hittable_list.cpp
@@ -15,7 +16,7 @@ add_executable(
 	interval.cpp
 	ray.cpp
 	sphere.cpp
-	vec3.cpp 
+	material.cpp
 )
 target_include_directories(main PRIVATE "./")
 target_compile_features(main PRIVATE cxx_std_17)
